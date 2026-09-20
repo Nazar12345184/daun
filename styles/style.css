@@ -260,6 +260,7 @@ nav a:hover, .back-link:hover {
 
 /* --- Advertisement Blocks --- */
 .ad-section {
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     gap: 10px;
     margin-bottom: 18px;
@@ -268,7 +269,7 @@ nav a:hover, .back-link:hover {
 }
 
 .ad-banner {
-    background: rgba(15, 17, 23, 0.9);
+    background: rgba(0, 0, 0, 0.9);
     border: 1px dashed rgba(255, 255, 255, 0.07);
     border-radius: var(--radius-tech);
     overflow: hidden;
@@ -1254,6 +1255,7 @@ header {
 }
 
 .ad-section {
+    background: #000;
     display: grid;
     width: 100%;
     grid-template-columns: minmax(0, 1fr) 220px;
@@ -1263,7 +1265,7 @@ header {
 }
 
 .ad-banner {
-    background: #171b1f;
+    background: #000;
     border-color: #303a43;
     border-radius: 2px;
     min-width: 0;
