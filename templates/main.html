@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bet-King — Новини</title>
+    <title>Bet-King — News</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
@@ -32,91 +32,114 @@
     <aside class="side-ad" aria-label="Advertisement space"></aside>
     <div class="container">
 
-    <div class="ad-section">
-        <div class="ad-banner ad-banner-leaderboard">
-            <img class="ad-barbos" src="../ads/ad1.gif" onclick="location.href='https://betking.com.ua/?gclid=Cj0KCQjwk5nVBhDiARIsAHNGqaeKUHDzVgGuMCuY93CTsLVocI32bylcPAxRH3WGSZDyziGgNUYoVf8aAvDyEALw_wcB'">
+        <div class="ad-section">
+            <div class="ad-banner ad-banner-leaderboard">
+                <img class="ad-barbos" src="../ads/ad1.gif" onclick="location.href='https://betking.com.ua/?gclid=Cj0KCQjwk5nVBhDiARIsAHNGqaeKUHDzVgGuMCuY93CTsLVocI32bylcPAxRH3WGSZDyziGgNUYoVf8aAvDyEALw_wcB'">
+            </div>
+            <div class="ad-banner ad-banner-strip">
+                <img class="ad-barbos" src="../ads/tenor.gif" alt="Advertisement 2">
+            </div>
         </div>
-        <div class="ad-banner ad-banner-rect">
-            <img class="ad-barbos" src="../ads/advertisement2.png" alt="Advertisement 2">
-        </div>
+
+        <main class="news-grid">
+            <article class="news-card">
+                <div>
+                    <span class="news-card__meta">22 Aug 2026</span>
+                    <h2>хто ж стане переможцем турніру?</h2>
+                    <p>сьогодні відбувається бій за третє місце турніру Pudge wars cup а завтра відбудеться фінал де зустрінуться FURIA і NAVI.</p>
+                </div>
+                <button class="btn" type="button" onclick="location.href='../templates/events.html'">переглянути в евентах</button>
+            </article>
+
+            <article class="news-card">
+                <div>
+                    <span class="news-card__meta">18 · Aug 2026</span>
+                    <h2>b1t на рахунок вильоту з фіналу турніру</h2>
+                    <p>так це справді сумно що...</p>
+                </div>
+                <button class="btn" type="button" onclick="location.href='../news/bit.html'">переглянути</button>
+            </article>
+
+            <article class="news-card">
+                <div>
+                    <span class="news-card__meta">25 · Aug 2026</span>
+                    <h2>NAVi, team spirit, Barbos, legacy - у поей офф?</h2>
+                    <p>сьогодні у плей-офф увійшли 4 перші команди.</p>
+                </div>
+                <button class="btn" type="button" onclick="location.href='../templates/events.html'">переглянути в евентах</button>
+            </article>
+
+            <article class="news-card">
+                <div>
+                    <span class="news-card__meta">22 Aug 2026</span>
+                    <h2>зараз проходить великий турнір організатором якого є компанія LOGIKA</h2>
+                    <p>сьогодні команди завершили підготовку до фіналу.</p>
+                </div>
+                <button class="btn" type="button" onclick="location.href='../templates/events.html'">переглянути в евентах</button>
+            </article>
+
+            <article class="news-card">
+                <div>
+                    <span class="news-card__meta">27 Aug 2026</span>
+                    <h2>нова зірка команди готується до великого дебюту</h2>
+                    <p>молодий гравець провів серію тренувань і вже встиг здивувати капітана команди.</p>
+                </div>
+                <button class="btn" type="button" onclick="location.href='../templates/players.html'">переглянути гравців</button>
+            </article>
+
+            <article class="news-card">
+                <div>
+                    <span class="news-card__meta">28 Aug 2026</span>
+                    <h2>неймовірний камбек у вечірньому матчі</h2>
+                    <p>команда програвала з рахунком 0:1, але повернулася в гру на останніх раундах.</p>
+                </div>
+                <button class="btn" type="button" onclick="location.href='../templates/match1.html'">відкрити матч</button>
+            </article>
+
+            <article class="news-card">
+                <div>
+                    <span class="news-card__meta">30 Aug 2026</span>
+                    <h2>найкращі моменти тижня вже доступні у медіа</h2>
+                    <p>зібрали найяскравіші хайлайти, сміливі рішення та найгучніші перемоги команд.</p>
+                </div>
+                <button class="btn" type="button" onclick="location.href='../templates/media.html'">дивитися хайлайти</button>
+            </article>
+
+            <article class="news-card">
+                <div>
+                    <span class="news-card__meta">01 Sep 2026</span>
+                    <h2>новий сезон турнірів стартує вже цього тижня</h2>
+                    <p>розклад оновлено: попереду кваліфікації, напружені фінали та кілька несподіваних учасників.</p>
+                </div>
+                <button class="btn" type="button" onclick="location.href='../templates/events.html'">відкрити події</button>
+            </article>
+        </main>
+
+        <section class="previous-news" aria-labelledby="previous-news-title">
+            <h2 id="previous-news-title">Previous news</h2>
+            <a class="previous-news__item" href="../news/bit.html">
+                <span class="previous-news__flag">UA</span>
+                <span class="previous-news__title">b1t розповів про підготовку команди до нового фіналу</span>
+                <span class="previous-news__time">2 days ago</span>
+            </a>
+            <a class="previous-news__item" href="../templates/media.html">
+                <span class="previous-news__flag">EU</span>
+                <span class="previous-news__title">найкращі раунди тижня: п'ять моментів, які варто побачити</span>
+                <span class="previous-news__time">3 days ago</span>
+            </a>
+            <a class="previous-news__item" href="../templates/players.html">
+                <span class="previous-news__flag">BR</span>
+                <span class="previous-news__title">команди назвали гравців, які стали відкриттям сезону</span>
+                <span class="previous-news__time">4 days ago</span>
+            </a>
+            <a class="previous-news__item" href="../templates/events.html">
+                <span class="previous-news__flag">PL</span>
+                <span class="previous-news__title">організатори оголосили розклад наступного етапу</span>
+                <span class="previous-news__time">5 days ago</span>
+            </a>
+        </section>
     </div>
 
-    <main class="news-grid">
-
-        <article class="news-card">
-            <div>
-                <span class="news-card__meta">22 Aug 2026</span>
-                <h2>хто ж стане переможцем турніру?</h2>
-                <p>сьогодні відбувається бій за третє місце турніру Pudge wars cup а завтра відбудеться фінал де зустрінуться FURIA і NAVI.</p>
-            </div>
-            <button class="btn" type="button" onclick="location.href='../templates/events.html'">переглянути в евентах</button>
-        </article>
-
-        <article class="news-card">
-            <div>
-                <span class="news-card__meta"> 18 · Aug 2026</span>
-                <h2>b1t на рахунок вильоту з фіналу турніру</h2>
-                <p>так це справді сумно що...</p>
-            </div>
-            <button class="btn" type="button" onclick="location.href='../news/bit.html'">переглянути</button>
-        </article>
-
-        <article class="news-card">
-            <div>
-                <span class="news-card__meta"> 25 · Aug 2026</span>
-                <h2>NAVi, team spirit, Barbos, legacy - у поей офф?</h2>
-                <p>сьогодні у плей-офф увійшли 4 перші команди.</p>
-            </div>
-            <button class="btn" type="button" onclick="location.href='../templates/events.html'">переглянути в евентах</button>
-        </article>
-
-        <article class="news-card">
-            <div>
-                <span class="news-card__meta">22 Aug 2026</span>
-                <h2>зараз проходить великий турнір організатором якого є компанія LOGIKA</h2>
-                <p>сьогодні команди завершили підготовку до фіналу.</p>
-            </div>
-            <button class="btn" type="button" onclick="location.href='../templates/events.html'">переглянути в евентах</button>
-        </article>
-
-        <article class="news-card">
-            <div>
-                <span class="news-card__meta">27 Aug 2026</span>
-                <h2>нова зірка команди готується до великого дебюту</h2>
-                <p>молодий гравець провів серію тренувань і вже встиг здивувати капітана команди.</p>
-            </div>
-            <button class="btn" type="button" onclick="location.href='../templates/players.html'">переглянути гравців</button>
-        </article>
-
-        <article class="news-card">
-            <div>
-                <span class="news-card__meta">28 Aug 2026</span>
-                <h2>неймовірний камбек у вечірньому матчі</h2>
-                <p>команда програвала з рахунком 0:1, але повернулася в гру на останніх раундах.</p>
-            </div>
-            <button class="btn" type="button" onclick="location.href='../templates/match1.html'">відкрити матч</button>
-        </article>
-
-        <article class="news-card">
-            <div>
-                <span class="news-card__meta">30 Aug 2026</span>
-                <h2>найкращі моменти тижня вже доступні у медіа</h2>
-                <p>зібрали найяскравіші хайлайти, сміливі рішення та найгучніші перемоги команд.</p>
-            </div>
-            <button class="btn" type="button" onclick="location.href='../templates/media.html'">дивитися хайлайти</button>
-        </article>
-
-        <article class="news-card">
-            <div>
-                <span class="news-card__meta">01 Sep 2026</span>
-                <h2>новий сезон турнірів стартує вже цього тижня</h2>
-                <p>розклад оновлено: попереду кваліфікації, напружені фінали та кілька несподіваних учасників.</p>
-            </div>
-            <button class="btn" type="button" onclick="location.href='../templates/events.html'">відкрити події</button>
-        </article>
-
-         
-</div>
     <aside class="news-sidebar" aria-label="Ongoing events">
         <div class="news-sidebar__header">Ongoing events</div>
         <a class="ongoing-event" href="../eventstab/Elogikawc26.html">
@@ -146,35 +169,8 @@
         </a>
         <div class="sidebar-ad" aria-label="Advertisement space">ADVERTISEMENT</div>
     </aside>
+    <aside class="side-ad" aria-label="Advertisement space"></aside>
 </div>
-        
-    </main>
-
-    <section class="previous-news" aria-labelledby="previous-news-title">
-        <h2 id="previous-news-title">Previous news</h2>
-        <a class="previous-news__item" href="../news/bit.html">
-            <span class="previous-news__flag">UA</span>
-            <span class="previous-news__title">b1t розповів про підготовку команди до нового фіналу</span>
-            <span class="previous-news__time">2 days ago</span>
-        </a>
-        <a class="previous-news__item" href="../templates/media.html">
-            <span class="previous-news__flag">EU</span>
-            <span class="previous-news__title">найкращі раунди тижня: п'ять моментів, які варто побачити</span>
-            <span class="previous-news__time">3 days ago</span>
-        </a>
-        <a class="previous-news__item" href="../templates/players.html">
-            <span class="previous-news__flag">BR</span>
-            <span class="previous-news__title">команди назвали гравців, які стали відкриттям сезону</span>
-            <span class="previous-news__time">4 days ago</span>
-        </a>
-        <a class="previous-news__item" href="../templates/events.html">
-            <span class="previous-news__flag">PL</span>
-            <span class="previous-news__title">організатори оголосили розклад наступного етапу</span>
-            <span class="previous-news__time">5 days ago</span>
-        </a>
-    </section>
-
-
 
 <div class="glow-orb glow-orb-orange"></div>
 <div class="glow-orb glow-orb-cyan"></div>

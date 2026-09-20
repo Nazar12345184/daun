@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bet-King — Матчі</title>
+    <title>Bet-King — Matches</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-
-
-
 
 <header>
     <div class="left">
@@ -35,94 +32,127 @@
     <aside class="side-ad" aria-label="Advertisement space"></aside>
     <div class="container">
 
-    <div class="ad-section">
-        <div class="ad-banner ad-banner-leaderboard">
-            <img class="ad-barbos" src="../ads/ad1.gif" onclick="location.href='https://betking.com.ua/?gclid=Cj0KCQjwk5nVBhDiARIsAHNGqaeKUHDzVgGuMCuY93CTsLVocI32bylcPAxRH3WGSZDyziGgNUYoVf8aAvDyEALw_wcB'">
+        <div class="ad-section">
+            <div class="ad-banner ad-banner-leaderboard">
+                <img class="ad-barbos" src="../ads/ad1.gif" onclick="location.href='https://betking.com.ua/?gclid=Cj0KCQjwk5nVBhDiARIsAHNGqaeKUHDzVgGuMCuY93CTsLVocI32bylcPAxRH3WGSZDyziGgNUYoVf8aAvDyEALw_wcB'">
+            </div>
+            <div class="ad-banner ad-banner-strip">
+                <img class="ad-barbos" src="../ads/tenor.gif" alt="Advertisement 2">
+            </div>
         </div>
-        <div class="ad-banner ad-banner-rect">
-            <img class="ad-barbos" src="../ads/advertisement2.png" alt="Advertisement 2">
+
+        <h1>Matches</h1>
+
+        <main class="matches" aria-label="Matches">
+            <article class="match-card match-card--live" onclick="location.href='matchh.html'">
+                <div class="match-card__top">
+                    <span class="match-card__status">LIVE</span>
+                    <span class="match-card__time">25 min</span>
+                </div>
+                <div class="match-title">BARBOSkin vs WW TEAm</div>
+                <div class="match-label">BLAST Open Kyiv 2026</div>
+                <div class="match-meta">за третє місце best of 3</div>
+                <div class="match-details">через 25 хвилин</div>
+            </article>
+            <article class="match-card" onclick="location.href='matchk.html'">
+                <div class="match-card__top">
+                    <span class="match-card__status">UP NEXT</span>
+                    <span class="match-card__time">18h</span>
+                </div>
+                <div class="match-title">FURIA vs NAVI</div>
+                <div class="match-label">Pudge wars cup</div>
+                <div class="match-meta">Фінал best of 5</div>
+                <div class="match-details">через 18 годин</div>
+            </article>
+        </main>
+
+        <h1>Recent Matches</h1>
+
+        <div class="results">
+            <article class="result-card">
+                <div>
+                    <div class="result-title" onclick="location.href='../templates/match7.html'">opponent vs AUSTRALIS</div>
+                </div>
+                <div>
+                    <div class="result-score">2:0</div>
+                </div>
+            </article>
+            <article class="result-card">
+                <div>
+                    <div class="result-title" onclick="location.href='../templates/match6.html'">Barbos vs BC.GAME</div>
+                </div>
+                <div>
+                    <div class="result-score">2:1</div>
+                </div>
+            </article>
+            <article class="result-card">
+                <div>
+                    <div class="result-title" onclick="location.href='../templates/match5.html'">NAVI vs VITALITY</div>
+                </div>
+                <div>
+                    <div class="result-score">2:1</div>
+                </div>
+            </article>
+            <article class="result-card">
+                <div>
+                    <div class="result-title" onclick="location.href='../templates/match4.html'">team SPIRIT vs FALCONS</div>
+                </div>
+                <div>
+                    <div class="result-score">2:0</div>
+                </div>
+            </article>
+            <article class="result-card">
+                <div>
+                    <div class="result-title" onclick="location.href='../templates/match3.html'">team SPIRIT vs NAVI</div>
+                </div>
+                <div>
+                    <div class="result-score">1:2</div>
+                </div>
+            </article>
+            <article class="result-card">
+                <div>
+                    <div class="result-title" onclick="location.href='../templates/match1.html'">Barbos vs Opponent</div>
+                </div>
+                <div>
+                    <div class="result-score">2:0</div>
+                </div>
+            </article>
+            <article class="result-card">
+                <div>
+                    <div class="result-title" onclick="location.href='../templates/match2.html'">Barbos vs NAVI</div>
+                </div>
+                <div>
+                    <div class="result-score">3:2</div>
+                </div>
+            </article>
         </div>
     </div>
 
-    <h1>Matches</h1>
-
-    <main class="matches" aria-label="Matches">
-        <article class="match-card" onclick="location.href='matchh.html'">
-            <div class="match-title">BARBOSkin vs WW TEAm</div>
-            <div class="match-label">BLAST Open Kyiv 2026</div>
-            <div class="match-meta">за третє місце best of 3</div>
-            <div class="match-details">через 25 хвилин</div>
-        </article>
-        <article class="match-card" onclick="location.href='matchk.html'">
-            <div class="match-title">FURIA vs NAVI</div>
-            <div class="match-label">Pudge wars cup</div>
-            <div class="match-meta">Фінал best of 5</div>
-            <div class="match-details">через 18 годин</div>
-        </article>
-    </main>
-
-    <h1>Recent Matches</h1>
-
-    <div class="results">
-    <article class="result-card">
-        <div>
-            <div class="result-title" onclick="location.href='../templates/match7.html'">opponent vs AUSTRALIS</div>
-        </div>
-        <div>
-            <div class="result-score">2:0</div>
-        </div>
-    </article>
-    <article class="result-card">
-        <div>
-            <div class="result-title" onclick="location.href='../templates/match6.html'">Barbos vs BC.GAME</div>
-        </div>
-        <div>
-            <div class="result-score">2:1</div>
-        </div>
-    </article>
-    <article class="result-card">
-        <div>
-            <div class="result-title" onclick="location.href='../templates/match5.html'">NAVI vs VITALITY</div>
-        </div>
-        <div>
-            <div class="result-score">2:1</div>
-        </div>
-    </article>
-    <article class="result-card">
-        <div>
-            <div class="result-title" onclick="location.href='../templates/match4.html'">team SPIRIT vs FALCONS</div>
-        </div>
-        <div>
-            <div class="result-score">2:0</div>
-        </div>
-    </article>
-    <article class="result-card">
-        <div>
-            <div class="result-title" onclick="location.href='../templates/match3.html'">team SPIRIT vs NAVI</div>
-        </div>
-        <div>
-            <div class="result-score">1:2</div>
-        </div>
-    </article>
-    <article class="result-card">
-        <div>
-            <div class="result-title" onclick="location.href='../templates/match1.html'">Barbos vs Opponent</div>
-        </div>
-        <div>
-            <div class="result-score">2:0</div>
-        </div>
-    </article>
-    <article class="result-card">
-        <div>
-            <div class="result-title" onclick="location.href='../templates/match2.html'">Barbos vs NAVI</div>
-        </div>
-        <div>
-            <div class="result-score">3:2</div>
-        </div>
-    </article>
-</div>
-    <aside class="side-ad" aria-label="Advertisement space"></aside>
-</div>
+    <aside class="news-sidebar" aria-label="Ongoing events">
+        <div class="news-sidebar__header">Ongoing events</div>
+        <a class="ongoing-event" href="../eventstab/BLASTopenkyiv26.html">
+            <span class="ongoing-event__icon">LIVE</span>
+            <span class="ongoing-event__name">BARBOSkin vs WW TEAm</span>
+            <span class="ongoing-event__date">BLAST Open Kyiv 2026</span>
+            <strong class="ongoing-event__prize">25 min</strong>
+        </a>
+        <a class="ongoing-event" href="../eventstab/Elogikawc26.html">
+            <span class="ongoing-event__icon">UP</span>
+            <span class="ongoing-event__name">FURIA vs NAVI</span>
+            <span class="ongoing-event__date">Pudge wars cup</span>
+            <strong class="ongoing-event__prize">18h</strong>
+        </a>
+        <div class="news-sidebar__header news-sidebar__header--past">Past events</div>
+        <a class="past-event" href="../eventstab/lobbysf.html">
+            <span class="past-event__name">Лобби на СФах</span>
+            <span class="past-event__date">Aug 12 - Aug 14</span>
+        </a>
+        <a class="past-event" href="../eventstab/1v1LOGIKAcup.html">
+            <span class="past-event__name">1v1 LOGIKA cup</span>
+            <span class="past-event__date">Aug 6 - Aug 13</span>
+        </a>
+        <div class="sidebar-ad" aria-label="Advertisement space">ADVERTISEMENT</div>
+    </aside>
 </div>
 
 <div class="glow-orb glow-orb-orange"></div>

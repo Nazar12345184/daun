@@ -283,7 +283,8 @@ nav a:hover, .back-link:hover {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
+    object-position: center;
 }
 
 /* Wide leaderboard banner */
@@ -302,7 +303,10 @@ nav a:hover, .back-link:hover {
 /* Full-width strip */
 .ad-banner-strip {
     width: 100%;
-    height: 80px;
+    max-width: none;
+    flex: 1 1 100%;
+    min-width: 0;
+    height: 90px;
 }
 
 /* Placeholder label shown when image missing */
@@ -486,11 +490,53 @@ nav a:hover, .back-link:hover {
 }
 
 .match-card {
-    padding: 18px 20px;
+    padding: 12px 12px 10px;
+    background: #1c2228;
+    border: 1px solid rgba(111, 122, 138, 0.22);
+    border-left: 2px solid rgba(126, 168, 196, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 2px;
+    min-height: 0;
+}
+
+.match-card--live {
+    border-left-color: #d8b853;
+    background: linear-gradient(180deg, rgba(24, 20, 12, 0.96), rgba(18, 16, 12, 0.98));
+    box-shadow: inset 0 0 0 1px rgba(216, 184, 83, 0.14);
+}
+
+.match-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.match-card__status {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 7px;
+    border-radius: 999px;
+    background: rgba(216, 184, 83, 0.16);
+    border: 1px solid rgba(216, 184, 83, 0.25);
+    color: #f3cc64;
+    font: 700 8px var(--font-subheading);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.match-card__time {
+    color: var(--text-muted);
+    font: 600 9px var(--font-subheading);
+    letter-spacing: 0.04em;
 }
 
 .match-title {
-    font-size: 16px;
+    font-size: 15px;
+    margin: 0;
 }
 
 .match-title, .result-title {
@@ -938,7 +984,7 @@ header {
 
 .page-layout {
     display: grid;
-    grid-template-columns: minmax(110px, 160px) minmax(0, 1fr);
+    grid-template-columns: minmax(110px, 160px) minmax(0, 1fr) minmax(220px, 260px);
     gap: 12px;
     max-width: 1400px;
     margin: 0 auto;
@@ -946,17 +992,26 @@ header {
 }
 
 .page-layout:has(.news-sidebar) {
-    grid-template-columns: minmax(110px, 160px) minmax(0, 1060px) minmax(110px, 160px);
+    grid-template-columns: minmax(110px, 160px) minmax(0, 1fr) minmax(220px, 260px);
 }
 
 .page-layout > .side-ad:last-child {
     display: none;
 }
 
-.page-layout .container {
+.page-layout > .container {
     width: 100%;
     max-width: none;
     padding: 0 0 48px;
+    grid-column: 2;
+}
+
+.page-layout > .news-sidebar {
+    grid-column: 3;
+}
+
+.page-layout > .previous-news {
+    grid-column: 2;
 }
 
 .side-ad {
@@ -968,6 +1023,42 @@ header {
     overflow: hidden;
     position: sticky;
     top: 58px;
+}
+
+.side-ad--promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    background: linear-gradient(180deg, rgba(33, 19, 45, 0.95), rgba(12, 9, 18, 0.98));
+    border: 1px solid rgba(165, 102, 226, 0.45);
+    box-shadow: inset 0 0 18px rgba(141, 65, 230, 0.18), 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+.side-ad--promo .side-ad__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: #f4f3f8;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 0.9;
+    text-shadow: 0 0 10px rgba(153, 102, 255, 0.5);
+    text-align: center;
+}
+
+.side-ad__small {
+    font-size: 18px;
+    color: #f3ecff;
+}
+
+.side-ad__big {
+    font-size: 26px;
+    color: #f2edf7;
 }
 
 .side-ad::before {
@@ -989,6 +1080,11 @@ header {
     font: 700 11px var(--font-subheading);
     letter-spacing: 0.12em;
     background: repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 6px);
+}
+
+.side-ad--promo::before,
+.side-ad--promo::after {
+    display: none;
 }
 
 .news-sidebar {
@@ -1160,9 +1256,10 @@ header {
 .ad-section {
     display: grid;
     width: 100%;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
-    gap: 8px;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 10px;
     margin-bottom: 12px;
+    align-items: stretch;
 }
 
 .ad-banner {
@@ -1178,8 +1275,58 @@ header {
     height: 88px;
 }
 
+.ad-banner-strip {
+    width: 100%;
+    height: 88px;
+    max-width: none;
+}
+
 .ad-banner-rect {
     height: 88px;
+}
+
+.side-ad--promo {
+    width: 220px;
+    min-height: 88px;
+    height: 88px;
+    margin-top: 0;
+    background: linear-gradient(180deg, rgba(33, 19, 45, 0.95), rgba(12, 9, 18, 0.98));
+    border: 1px solid rgba(165, 102, 226, 0.45);
+    box-shadow: inset 0 0 18px rgba(141, 65, 230, 0.18), 0 0 0 1px rgba(255,255,255,0.03);
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-ad--promo::before,
+.side-ad--promo::after {
+    display: none;
+}
+
+.side-ad__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 0.9;
+    text-shadow: 0 0 10px rgba(153, 102, 255, 0.5);
+    color: #f4f3f8;
+    text-align: center;
+}
+
+.side-ad__small {
+    font-size: 18px;
+}
+
+.side-ad__big {
+    font-size: 26px;
 }
 
 .news-grid, .matches, .events-grid, .players-grid, .results-grid {
@@ -1215,21 +1362,47 @@ h1, h2, h3 {
     .side-ad, .news-sidebar {
         display: none;
     }
+    .players-layout {
+        grid-template-columns: minmax(0, 1fr) 240px;
+    }
+    .players-layout > .news-sidebar {
+        display: block;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .players-layout > .container {
+        grid-column: 1;
+        grid-row: 1;
+    }
     .page-layout .container {
         padding-bottom: 40px;
     }
 }
 
 @media (max-width: 700px) {
+    .players-layout {
+        grid-template-columns: 1fr;
+    }
+    .players-layout > .container,
+    .players-layout > .news-sidebar {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
     .matches {
         grid-template-columns: 1fr;
     }
 
     .ad-section {
+        display: grid;
         grid-template-columns: 1fr;
     }
+    .ad-banner-strip,
+    .ad-banner-leaderboard,
     .ad-banner-rect {
         width: 100%;
+        max-width: none;
+        flex: 1 1 auto;
     }
     .previous-news__item {
         grid-template-columns: 28px minmax(0, 1fr);
