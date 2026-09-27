@@ -619,11 +619,35 @@ nav a:hover, .back-link:hover {
     margin-top: 12px;
 }
 
+.player-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.player-photo-placeholder,
+.profile-photo-placeholder {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border: 1px dashed var(--border-accent);
+    background: rgba(255, 255, 255, 0.025);
+    color: var(--text-muted);
+    font-family: var(--font-subheading);
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.player-photo-placeholder {
+    width: 52px;
+    aspect-ratio: 1;
+}
+
 .player-card h2 {
     font-size: 14px;
     cursor: pointer;
     transition: color 0.2s ease;
-    margin-bottom: 6px;
 }
 
 .player-card h2:hover {
@@ -722,6 +746,23 @@ nav a:hover, .back-link:hover {
     max-width: 760px;
     margin: 14px auto;
     padding: 20px;
+}
+
+.profile-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.profile-photo-placeholder {
+    width: 104px;
+    aspect-ratio: 1;
+    font-size: 10px;
+}
+
+.profile-heading h1 {
+    margin: 0;
 }
 
 .profile-card .subtitle {
