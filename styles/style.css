@@ -627,7 +627,7 @@ nav a:hover, .back-link:hover {
 }
 
 .player-photo-placeholder,
-.profile-photo-placeholder {
+.profile-photo {
     display: grid;
     place-items: center;
     flex: 0 0 auto;
@@ -639,9 +639,10 @@ nav a:hover, .back-link:hover {
     font-weight: 700;
 }
 
-.player-photo-placeholder {
-    width: 52px;
+.player-photo {
+    width: 76px;
     aspect-ratio: 1;
+    object-fit: cover;
 }
 
 .player-card h2 {
@@ -755,9 +756,10 @@ nav a:hover, .back-link:hover {
     margin-bottom: 8px;
 }
 
-.profile-photo-placeholder {
+.profile-photo {
     width: 104px;
     aspect-ratio: 1;
+    object-fit: cover;
     font-size: 10px;
 }
 
