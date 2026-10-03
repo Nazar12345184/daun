@@ -254,8 +254,89 @@ nav a:hover, .back-link:hover {
     white-space: nowrap;
 }
 
+.header-user-avatar {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    border-radius: 50%;
+    background: #1677e8;
+    color: #fff;
+    font-family: var(--font-subheading);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+}
+
 .header-signin:hover {
     color: var(--text-main);
+}
+
+.header-signin-trigger {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 2px;
+}
+
+.header-auth-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.header-auth-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-auth-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 200;
+    display: grid;
+    min-width: 128px;
+    padding: 5px;
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-tech);
+    background: #10141c;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(4px);
+    transition: opacity 0.14s ease, transform 0.14s ease, visibility 0.14s;
+}
+
+.header-auth-menu:hover .header-auth-dropdown,
+.header-auth-menu:focus-within .header-auth-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.header-auth-dropdown a {
+    padding: 8px 10px;
+    border-radius: 2px;
+    color: var(--text-main);
+    font-family: var(--font-subheading);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.header-auth-dropdown a:hover,
+.header-auth-dropdown a:focus-visible {
+    outline: none;
+    background: rgba(126, 168, 196, 0.14);
+    color: var(--text-bright);
 }
 
 /* --- Advertisement Blocks --- */

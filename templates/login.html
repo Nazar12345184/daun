@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход — Bet-King</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/auth.css">
+    <script src="../styles/auth.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="left">
+            <div class="logo">
+                <img src="gg.png" alt="Логотип Bet-King">
+            </div>
+            <a class="brand" href="../zra/bet.html">Bet-King</a>
+        </div>
+        <nav class="gay">
+            <button class="btn-nav" onclick="location.href='main.html'">Новости</button>
+            <button class="btn-nav" onclick="location.href='index.html'">Матчи</button>
+            <button class="btn-nav" onclick="location.href='res.html'">Результаты</button>
+            <button class="btn-nav" onclick="location.href='events.html'">События</button>
+            <button class="btn-nav" onclick="location.href='players.html'">Игроки</button>
+        </nav>
+        <div class="header-right">
+            <button class="header-signin" type="button">Sign in</button>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <section class="auth-panel" aria-labelledby="login-title">
+            <div class="auth-kicker">Bet-King Arena</div>
+            <h1 id="login-title">Вход</h1>
+            <p class="auth-intro" id="login-intro">Войдите, используя юзернейм и пароль.</p>
+
+            <div class="auth-mode-switch" role="group" aria-label="Режим аккаунта">
+                <button class="auth-mode-button" type="button" data-auth-mode="register" aria-pressed="false">Регистрация</button>
+                <button class="auth-mode-button is-active" type="button" data-auth-mode="login" aria-pressed="true">Вход</button>
+            </div>
+
+            <form class="auth-form" id="login-form">
+                <label class="auth-field" for="login-username">
+                    Юзернейм
+                    <input id="login-username" name="username" type="text" autocomplete="username" minlength="3" maxlength="20" pattern="[A-Za-z0-9_]{3,20}" placeholder="Например, player_01" required>
+                </label>
+                <label class="auth-field" for="login-password">
+                    Пароль
+                    <input id="login-password" name="password" type="password" autocomplete="current-password" minlength="8" maxlength="64" placeholder="Введите пароль" required>
+                </label>
+                <label class="auth-field" id="confirm-password-field" for="confirm-password" hidden>
+                    Повторите пароль
+                    <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" maxlength="64" placeholder="Введите пароль ещё раз" disabled>
+                </label>
+                <button class="auth-submit" type="submit">Войти</button>
+            </form>
+            <p class="auth-status" id="login-status" role="status" aria-live="polite" hidden></p>
+            <p class="auth-demo-note">Регистрация работает локально в этом браузере. Пароль сохраняется только в виде хеша, но без backend аккаунт не защищён и не синхронизируется. Не используйте настоящий пароль.</p>
+            <a class="auth-back" href="players.html">Вернуться к игрокам</a>
+        </section>
+    </main>
+</body>
+</html>
