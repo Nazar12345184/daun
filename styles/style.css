@@ -215,7 +215,7 @@ nav a:hover, .back-link:hover {
     display: flex;
     align-items: center;
     height: 100%;
-    transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    transition: color 0.15s ease, opacity 0.15s ease;
     white-space: nowrap;
     text-transform: capitalize;
     letter-spacing: 0.01em;
@@ -223,13 +223,13 @@ nav a:hover, .back-link:hover {
 
 .btn-nav:hover {
     color: var(--text-main);
-    background: rgba(255,255,255,0.04);
-    border-bottom-color: var(--accent-cyan);
+    background: transparent;
+    border-bottom-color: transparent;
 }
 
 .btn-nav.active {
     color: var(--text-bright);
-    border-bottom-color: var(--accent-cyan);
+    border-bottom-color: transparent;
 }
 
 /* Header right side */
@@ -698,6 +698,310 @@ nav a:hover, .back-link:hover {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 10px;
     margin-top: 12px;
+}
+
+.teams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+    max-width: 900px;
+}
+
+.team-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-tech);
+    padding: 12px 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--gradient-cyber);
+    opacity: 0.25;
+    transition: opacity 0.2s ease;
+}
+
+.team-card:hover {
+    background: var(--card-hover-bg);
+    border-color: var(--border-accent);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.team-card:hover::after {
+    opacity: 0.55;
+}
+
+.team-card__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.team-logo {
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(126, 168, 196, 0.22), rgba(91, 127, 166, 0.14));
+    border: 1px solid rgba(126, 168, 196, 0.4);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.team-logo--alt {
+    background: linear-gradient(135deg, rgba(108, 118, 175, 0.24), rgba(91, 95, 138, 0.14));
+    border-color: rgba(108, 118, 175, 0.4);
+}
+
+.team-logo--gold {
+    background: linear-gradient(135deg, rgba(184, 145, 58, 0.22), rgba(184, 145, 58, 0.12));
+    border-color: rgba(184, 145, 58, 0.4);
+}
+
+.team-logo--cyan {
+    background: linear-gradient(135deg, rgba(62, 148, 177, 0.24), rgba(62, 148, 177, 0.12));
+    border-color: rgba(62, 148, 177, 0.4);
+}
+
+.team-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--accent-cyan);
+    background: rgba(100, 116, 139, 0.07);
+    border: 1px solid rgba(100, 116, 139, 0.15);
+    padding: 2px 7px;
+    border-radius: var(--radius-tech);
+    font-family: var(--font-subheading);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.team-card h2 {
+    font-size: 14px;
+    color: var(--text-bright);
+}
+
+.team-meta {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.team-badge,
+.team-role {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--accent-cyan);
+    background: rgba(100, 116, 139, 0.07);
+    border: 1px solid rgba(100, 116, 139, 0.15);
+    padding: 2px 7px;
+    border-radius: var(--radius-tech);
+    font-family: var(--font-subheading);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.team-roster {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.team-roster li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 7px 8px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-main);
+}
+
+.team-roster a {
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.team-roster a:hover {
+    color: var(--accent-cyan);
+}
+
+.team-roster li span {
+    color: var(--text-muted);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.team-profile-card {
+    max-width: 980px;
+    margin: 20px auto 0;
+}
+
+.team-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.team-profile-logo {
+    width: 86px;
+    height: 86px;
+    border-radius: 18px;
+    display: block;
+    object-fit: cover;
+    border: 1px solid rgba(126, 168, 196, 0.4);
+    background: linear-gradient(135deg, rgba(126, 168, 196, 0.24), rgba(91, 127, 166, 0.14));
+}
+
+.team-profile-header h1 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.1;
+}
+
+.team-profile-subtitle {
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.team-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 18px;
+}
+
+.team-tab {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: var(--text-muted);
+    font-family: var(--font-subheading);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.team-tab.active,
+.team-tab:hover {
+    color: var(--text-bright);
+    background: transparent;
+    border-color: transparent;
+}
+
+.team-panel {
+    display: none;
+}
+
+.team-panel.active {
+    display: block;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.team-player-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-tech);
+    padding: 12px;
+}
+
+.team-player-card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.team-player-card a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.team-player-card a:hover {
+    color: var(--accent-cyan);
+}
+
+.profile-card a,
+.player-card-heading h2 a,
+.player-card .card-footer a {
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.profile-card a:hover,
+.profile-card a:focus-visible,
+.player-card-heading h2 a:hover,
+.player-card-heading h2 a:focus-visible,
+.player-card .card-footer a:hover,
+.player-card .card-footer a:focus-visible {
+    color: var(--accent-cyan);
+}
+
+.team-numbers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-tech);
+    padding: 12px;
+}
+
+.stat-box .label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.stat-box .value {
+    color: var(--text-bright);
+    font-size: 22px;
+    font-weight: 800;
+    font-family: var(--font-subheading);
 }
 
 .player-card-heading {
@@ -1549,4 +1853,84 @@ h1, h2, h3 {
     height: 100%;
     object-fit: cover;
 }
+
+
+.team-card__header img {
+    width: 50px;          
+    height: 50px;
+    object-fit: cover;    
+    border-radius: 8px;   
+    margin-right: 12px;   
+}
+
+
+.team-card__header .team-logo {
+    display: none;       
+}
+
+
+.team-card a {
+    color: #ffffff;            
+    text-decoration: none;     
+    transition: color 0.2s;   
+}
+
+.team-card a:hover {
+    color: #ff4655;           
+}
+
+.teams {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* 1. Картка команди */
+.team-card {
+        /* або ваш колір */
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;          /* ВАЖЛИВО: обрізає все, що вилазить */
+}
+
+/* 2. Шапка картки */
+.team-card__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* 3. ВСІ картинки в шапці (і .team-logo, і звичайні img) */
+.team-card__header img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;       /* contain краще для логотипів, ніж cover */
+    flex-shrink: 0;            /* щоб картинка не стискалася */
+    border-radius: 8px;
+     /* фон, якщо логотип прозорий */
+}
+
+/* 4. Прибираємо зайвий квадрат "B" у BARBOS (якщо він не потрібен) */
+.team-card__header img {
+    width: 50px;          
+    height: 50px;
+    object-fit: cover;    
+    border-radius: 8px;   
+    margin-right: 12px;   
+}
+
+
+
+.team-card {
+    position: relative;
+    z-index: 2;
+}
+.ad-banner {
+    z-index: 1;
+}
+
+
 

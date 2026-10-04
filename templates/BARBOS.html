@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARBOS — команда</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../styles/auth.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="left">
+        <div class="logo">
+            <img src="gg.png" alt="Logo">
+        </div>
+        <a class="brand" href="../zra/bet.html">Bet-King</a>
+    </div>
+    <nav class="gay">
+        <button class="btn-nav" onclick="location.href='main.html'">News</button>
+        <button class="btn-nav" onclick="location.href='index.html'">Matches</button>
+        <button class="btn-nav" onclick="location.href='res.html'">Results</button>
+        <button class="btn-nav" onclick="location.href='events.html'">Events</button>
+        <button class="btn-nav active" onclick="location.href='teams.html'">Teams</button>
+        <button class="btn-nav" onclick="location.href='players.html'">Players</button>
+    </nav>
+    <div class="header-right">
+        <button class="header-signin">Sign in</button>
+    </div>
+</header>
+
+<div class="container">
+    <section class="profile-card team-profile-card">
+        <div class="team-profile-header">
+            <img class="team-profile-logo" src="../ph/gg.jpg" alt="BARBOS logo">
+            <div>
+                <div class="team-profile-subtitle">Team</div>
+                <h1>BARBOS</h1>
+            </div>
+        </div>
+
+        <div class="team-tabs">
+            <button class="team-tab active" type="button">Players</button>
+            <button class="team-tab" type="button">Stats</button>
+            <button class="team-tab" type="button">Recent Matches</button>
+        </div>
+
+        <div class="team-panel active">
+            <div class="team-grid">
+                <article class="team-player-card"><h3><a href="NA1ZEL.html">NA1ZEL</a></h3><div class="player-role">Entry Fragger</div></article>
+                <article class="team-player-card"><h3><a href="DM1TrIy.html">DM1TrIy</a></h3><div class="player-role">Support</div></article>
+                <article class="team-player-card"><h3><a href="m0on.html">m0on</a></h3><div class="player-role">Support</div></article>
+                <article class="team-player-card"><h3><a href="monster.html">Monster</a></h3><div class="player-role">AWP</div></article>
+                <article class="team-player-card"><h3><a href="partition.html">partition</a></h3><div class="player-role">Lurker</div></article>
+            </div>
+        </div>
+
+        <div class="team-panel">
+            <div class="team-numbers">
+                <div class="stat-box"><span class="label">Wins</span><span class="value">14</span></div>
+                <div class="stat-box"><span class="label">Winrate</span><span class="value">61%</span></div>
+                <div class="stat-box"><span class="label">K/D</span><span class="value">1.26</span></div>
+                <div class="stat-box"><span class="label">Map Wins</span><span class="value">58</span></div>
+            </div>
+        </div>
+
+        <div class="team-panel">
+            <div class="results">
+                <article class="result-card">
+                    <div>
+                        <div class="result-title" onclick="location.href='match2.html'">Barbos vs NAVI</div>
+                    </div>
+                    <div>
+                        <div class="result-score">3:2</div>
+                    </div>
+                </article>
+                <article class="result-card">
+                    <div>
+                        <div class="result-title" onclick="location.href='match1.html'">Barbos vs Opponent</div>
+                    </div>
+                    <div>
+                        <div class="result-score">2:0</div>
+                    </div>
+                </article>
+                <article class="result-card">
+                    <div>
+                        <div class="result-title" onclick="location.href='match6.html'">Barbos vs BC.GAME</div>
+                    </div>
+                    <div>
+                        <div class="result-score">2:1</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = Array.from(document.querySelectorAll('.team-tab'));
+    const panels = Array.from(document.querySelectorAll('.team-panel'));
+
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (item) {
+          item.classList.toggle('active', item === tab);
+        });
+        panels.forEach(function (panel, panelIndex) {
+          panel.classList.toggle('active', panelIndex === index);
+        });
+      });
+    });
+  });
+</script>
+</body>
+</html>

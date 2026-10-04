@@ -21,6 +21,7 @@
         <button class="btn-nav" onclick="location.href='../templates/index.html'">Matches</button>
         <button class="btn-nav" onclick="location.href='../templates/res.html'">Results</button>
         <button class="btn-nav" onclick="location.href='../templates/events.html'">Events</button>
+        <button class="btn-nav" onclick="location.href='../templates/teams.html'">Teams</button>
         <button class="btn-nav active" onclick="location.href='../templates/players.html'">Players</button>
     </nav>
     <div class="header-right">
@@ -43,6 +44,15 @@
 
         <h1 class="page-title">Players</h1>
 
+        <div class="player-filters" role="group" aria-label="Filter players by team">
+            <button class="btn active" type="button" data-player-filter="all">All players</button>
+            <button class="btn" type="button" data-player-filter="BARBOS">BARBOS</button>
+            <button class="btn" type="button" data-player-filter="NAVI">NAVI</button>
+            <button class="btn" type="button" data-player-filter="SPIRIT">SPIRIT</button>
+            <button class="btn" type="button" data-player-filter="Vitality">Vitality</button>
+            <button class="btn" type="button" data-player-filter="FaZe">FaZe</button>
+            <button class="btn" type="button" data-player-filter="opponent">opponent</button>
+        </div>
         <div class="players">
             <article class="player-card">
                 <div class="player-card-heading">
@@ -61,7 +71,7 @@
 
             <article class="player-card">
                 <div class="player-card-heading">
-                    <img class="player-photo" src="../ph/images.jpg" alt="Фото DM1TrIy">
+                    <img class="player-photo" src="../ph/gg.jpg" alt="Фото DM1TrIy">
                     <h2 onclick="location.href='../templates/DM1TrIy.html'">DM1TrIy</h2>
                 </div>
                 <div class="player-meta">
@@ -90,7 +100,7 @@
 
             <article class="player-card">
                 <div class="player-card-heading">
-                    <img class="player-photo" src="../ph/dnk.png" alt="Фото donk">
+                    <img class="player-photo" src="../ph/s.png" alt="Фото donk">
                     <h2 onclick="location.href='../templates/donk.html'">donk</h2>
                 </div>
                 <div class="player-meta">
@@ -104,7 +114,7 @@
 
             <article class="player-card">
                 <div class="player-card-heading">
-                    <img class="player-photo" src="../ph/wafla.png" alt="Фото W0NDERFUL">
+                    <img class="player-photo" src="../ph/n.jpg" alt="Фото W0NDERFUL">
                     <h2 onclick="location.href='../templates/W0NDERFUL.html'">W0NDERFUL</h2>
                 </div>
                 <div class="player-meta">
@@ -119,7 +129,7 @@
 
             <article class="player-card">
                 <div class="player-card-heading">
-                    <img class="player-photo" src="../ph/sopla.png" alt="Фото m0on">
+                    <img class="player-photo" src="../ph/gg.jpg" alt="Фото m0on">
                     <h2 onclick="location.href='../templates/m0on.html'">m0on</h2>
                 </div>
                 <div class="player-meta">
@@ -133,7 +143,7 @@
 
             <article class="player-card">
                 <div class="player-card-heading">
-                    <img class="player-photo" src="../ads/tenor.gif" alt="Фото Monster">
+                    <img class="player-photo" src="../ph/gg.jpg" alt="Фото Monster">
                     <h2 onclick="location.href='../templates/monster.html'">Monster</h2>
                 </div>
                 <div class="player-meta">
@@ -147,7 +157,7 @@
 
             <article class="player-card">
                 <div class="player-card-heading">
-                    <img class="player-photo" src="../ph/csgo.gif" alt="Фото partition">
+                    <img class="player-photo" src="../ph/gg.jpg" alt="Фото partition">
                     <h2 onclick="location.href='../templates/partition.html'">partition</h2>
                 </div>
                 <div class="player-meta">
@@ -158,6 +168,20 @@
                     <span>Barbos</span>
                 </div>
             </article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/n.jpg" alt="b1t"><h2><a href="../templates/bit.html">b1t</a></h2></div><div class="player-meta"><div class="player-badge">NAVI</div><div class="player-role">Entry</div></div><div class="card-footer"><a class="card-link" href="NAVI.html">NAVI roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/n.jpg" alt="IM"><h2><a href="../templates/im.html">IM</a></h2></div><div class="player-meta"><div class="player-badge">NAVI</div><div class="player-role">Rifler</div></div><div class="card-footer"><a class="card-link" href="NAVI.html">NAVI roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/n.jpg" alt="makazze"><h2><a href="../templates/makaka.html">makazze</a></h2></div><div class="player-meta"><div class="player-badge">NAVI</div><div class="player-role">Lurker</div></div><div class="card-footer"><a class="card-link" href="NAVI.html">NAVI roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/n.jpg" alt="alexib"><h2><a href="../templates/al.html">alexib</a></h2></div><div class="player-meta"><div class="player-badge">NAVI</div><div class="player-role">Captain</div></div><div class="card-footer"><a class="card-link" href="NAVI.html">NAVI roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/s.png" alt="tnir"><h2><a href="../templates/tnir.html">tnir</a></h2></div><div class="player-meta"><div class="player-badge">SPIRIT</div><div class="player-role">Rifle</div></div><div class="card-footer"><a class="card-link" href="SPIRIT.html">SPIRIT roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/s.png" alt="zontix"><h2><a href="../templates/zont.html">zontix</a></h2></div><div class="player-meta"><div class="player-badge">SPIRIT</div><div class="player-role">Rifle</div></div><div class="card-footer"><a class="card-link" href="SPIRIT.html">SPIRIT roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/s.png" alt="shiro"><h2><a href="../templates/shiro.html">shiro</a></h2></div><div class="player-meta"><div class="player-badge">SPIRIT</div><div class="player-role">Rifle</div></div><div class="card-footer"><a class="card-link" href="SPIRIT.html">SPIRIT roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/s.png" alt="magix"><h2><a href="../templates/magix.html">magix</a></h2></div><div class="player-meta"><div class="player-badge">SPIRIT</div><div class="player-role">Rifle</div></div><div class="card-footer"><a class="card-link" href="SPIRIT.html">SPIRIT roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/sopla.png" alt="Magisk"><h2>Magisk</h2></div><div class="player-meta"><div class="player-badge">Vitality</div><div class="player-role">IGL</div></div><div class="card-footer"><a class="card-link" href="Vitality.html">Vitality roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/sopla.png" alt="ApEX"><h2>ApEX</h2></div><div class="player-meta"><div class="player-badge">Vitality</div><div class="player-role">Entry</div></div><div class="card-footer"><a class="card-link" href="Vitality.html">Vitality roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/sopla.png" alt="ZywOo"><h2>ZywOo</h2></div><div class="player-meta"><div class="player-badge">Vitality</div><div class="player-role">AWP</div></div><div class="card-footer"><a class="card-link" href="Vitality.html">Vitality roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/ggg.jpg" alt="ropz"><h2>ropz</h2></div><div class="player-meta"><div class="player-badge">FaZe</div><div class="player-role">Entry</div></div><div class="card-footer"><a class="card-link" href="FaZe.html">FaZe roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/ggg.jpg" alt="rain"><h2>rain</h2></div><div class="player-meta"><div class="player-badge">FaZe</div><div class="player-role">Anchor</div></div><div class="card-footer"><a class="card-link" href="FaZe.html">FaZe roster</a></div></article>
+            <article class="player-card"><div class="player-card-heading"><img class="player-photo" src="../ph/ggg.jpg" alt="Twistzz"><h2>Twistzz</h2></div><div class="player-meta"><div class="player-badge">FaZe</div><div class="player-role">IGL</div></div><div class="card-footer"><a class="card-link" href="FaZe.html">FaZe roster</a></div></article>
         </div>
     </div>
 
@@ -205,6 +229,31 @@
 <footer class="site-footer">
     <p>&copy; 2026 <span>Bet-King & GG Arena</span>. Всі права захищено. Кіберспортивний портал турнірів та матчів.</p>
 </footer>
+
+<script>
+    const playerFilterButtons = document.querySelectorAll('[data-player-filter]');
+    const playerCards = document.querySelectorAll('.player-card');
+    const playerTeams = {
+        NA1ZEL: 'BARBOS', DM1TrIy: 'BARBOS', '0pp': 'opponent', donk: 'SPIRIT',
+        W0NDERFUL: 'NAVI', m0on: 'BARBOS', Monster: 'BARBOS', partition: 'BARBOS',
+        b1t: 'NAVI', IM: 'NAVI', makazze: 'NAVI', alexib: 'NAVI', tnir: 'SPIRIT',
+        zontix: 'SPIRIT', shiro: 'SPIRIT', magix: 'SPIRIT', Magisk: 'Vitality',
+        ApEX: 'Vitality', ZywOo: 'Vitality', ropz: 'FaZe', rain: 'FaZe', Twistzz: 'FaZe'
+    };
+    playerFilterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const selectedTeam = button.dataset.playerFilter;
+            playerFilterButtons.forEach((item) => item.classList.toggle('active', item === button));
+            playerCards.forEach((card) => {
+                const name = card.querySelector('.player-card-heading h2')?.textContent.trim();
+                const team = playerTeams[name];
+                const showCard = selectedTeam === 'all' || team === selectedTeam;
+                card.hidden = !showCard;
+                card.style.display = showCard ? '' : 'none';
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
