@@ -1431,7 +1431,7 @@ header {
 
 .page-layout {
     display: grid;
-    grid-template-columns: minmax(180px, 213px) minmax(0, 1fr) minmax(220px, 260px);
+    grid-template-columns: minmax(180px, 200px) minmax(0, 1fr) minmax(220px, 260px);
     gap: 12px;
     max-width: 1400px;
     margin: 0 auto;
@@ -1439,7 +1439,7 @@ header {
 }
 
 .page-layout:has(.news-sidebar) {
-    grid-template-columns: minmax(180px, 213px) minmax(0, 1fr) minmax(220px, 260px);
+    grid-template-columns: minmax(180px, 200px) minmax(0, 1fr) minmax(220px, 260px);
 }
 
 .page-layout > .side-ad:last-child {
@@ -1487,7 +1487,8 @@ header {
 .side-ad--hero img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 210px;
+    object-fit: fill;
 }
 
 .side-ad--promo {
