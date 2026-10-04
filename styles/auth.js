@@ -36,7 +36,7 @@
         try {
             const destination = new URL(returnTo, location.href);
             if (destination.origin === location.origin && !destination.pathname.endsWith('/login.html')) {
-                status.textContent += ' Возвращаем на предыдущую страницу...';
+                status.textContent += ' Повертаємося на попередню сторінку...';
                 setTimeout(() => location.assign(destination.href), 700);
             }
         } catch {
@@ -67,9 +67,9 @@
             avatar.title = user.username;
             avatar.setAttribute('aria-hidden', 'true');
             signInButton.parentElement.insertBefore(avatar, signInButton);
-            signInButton.textContent = 'Выйти';
+            signInButton.textContent = 'Вийти';
             signInButton.title = user.username;
-            signInButton.setAttribute('aria-label', `Выйти из аккаунта ${user.username}`);
+            signInButton.setAttribute('aria-label', `Вийти з облікового запису ${user.username}`);
             signInButton.addEventListener('click', () => {
                 localStorage.removeItem(sessionKey);
                 location.reload();
@@ -82,7 +82,7 @@
             signInButton.textContent = '';
             signInButton.appendChild(accountIcon);
             signInButton.classList.add('header-signin-trigger');
-            signInButton.setAttribute('aria-label', 'Открыть меню входа и регистрации');
+            signInButton.setAttribute('aria-label', 'Відкрити меню входу та реєстрації');
 
             const authMenu = document.createElement('div');
             authMenu.className = 'header-auth-menu';
@@ -91,7 +91,7 @@
 
             const dropdown = document.createElement('div');
             dropdown.className = 'header-auth-dropdown';
-            dropdown.setAttribute('aria-label', 'Аккаунт');
+            dropdown.setAttribute('aria-label', 'Обліковий запис');
 
             const loginLink = document.createElement('a');
             loginLink.href = getLoginUrl('login');
@@ -130,11 +130,11 @@
     function setMode(nextMode) {
         mode = nextMode;
         const registering = mode === 'register';
-        title.textContent = registering ? 'Создать аккаунт' : 'Вход';
+        title.textContent = registering ? 'Створити обліковий запис' : 'Вхід';
         intro.textContent = registering
-            ? 'Придумайте юзернейм и пароль для аккаунта.'
-            : 'Войдите, используя юзернейм и пароль.';
-        submitButton.textContent = registering ? 'Зарегистрироваться' : 'Войти';
+            ? 'Придумайте ім’я користувача та пароль для облікового запису.'
+            : 'Увійдіть за допомогою імені користувача та пароля.';
+        submitButton.textContent = registering ? 'Зареєструватися' : 'Увійти';
         confirmField.hidden = !registering;
         confirmInput.required = registering;
         confirmInput.disabled = !registering;
@@ -164,18 +164,18 @@
         const accounts = readStoredValue(accountsKey, {});
 
         if (!/^[a-zA-Z0-9_]{3,20}$/.test(username)) {
-            setStatus(status, 'Юзернейм: 3–20 символов, только латинские буквы, цифры и _.', true);
+            setStatus(status, 'Ім’я користувача: 3–20 символів, лише латинські літери, цифри та _.', true);
             return;
         }
 
         try {
             if (mode === 'register') {
                 if (accounts[normalizedUsername]) {
-                    setStatus(status, 'Этот юзернейм уже занят.', true);
+                    setStatus(status, 'Це ім’я користувача вже зайняте.', true);
                     return;
                 }
                 if (password !== confirmInput.value) {
-                    setStatus(status, 'Пароли не совпадают.', true);
+                    setStatus(status, 'Паролі не збігаються.', true);
                     return;
                 }
 
@@ -187,20 +187,20 @@
             } else {
                 const account = accounts[normalizedUsername];
                 if (!account || await hashPassword(password, account.salt) !== account.passwordHash) {
-                    setStatus(status, 'Неверный юзернейм или пароль.', true);
+                    setStatus(status, 'Неправильне ім’я користувача або пароль.', true);
                     return;
                 }
             }
 
             localStorage.setItem(sessionKey, JSON.stringify({ username }));
         } catch {
-            setStatus(status, 'Не удалось сохранить аккаунт. Откройте сайт через локальный сервер и проверьте настройки браузера.', true);
+            setStatus(status, 'Не вдалося зберегти обліковий запис. Відкрийте сайт через локальний сервер і перевірте налаштування браузера.', true);
             return;
         }
 
         passwordInput.value = '';
         confirmInput.value = '';
-        setStatus(status, mode === 'register' ? `Аккаунт ${username} создан.` : `Вы вошли как ${username}.`);
+        setStatus(status, mode === 'register' ? `Обліковий запис ${username} створено.` : `Ви увійшли як ${username}.`);
         redirectAfterAuth(status, params);
     });
 
