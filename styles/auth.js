@@ -77,7 +77,9 @@
         } else {
             const accountIcon = document.createElement('img');
             accountIcon.className = 'header-auth-icon';
-            accountIcon.src = new URL('../ads/6681204.png', location.href).href;
+            const isRootPage = location.pathname.endsWith('/') || /\/index\.html$/i.test(location.pathname);
+            const accountIconPath = isRootPage ? 'ads/6681204.png' : '../ads/6681204.png';
+            accountIcon.src = new URL(accountIconPath, location.href).href;
             accountIcon.alt = '';
             signInButton.textContent = '';
             signInButton.appendChild(accountIcon);
