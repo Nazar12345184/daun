@@ -1474,7 +1474,7 @@ header {
 
 .side-ad--hero {
     min-height: 0;
-    padding: 7px;
+    padding: 0;
     background: var(--card-bg);
     border-color: var(--border-subtle);
     transition: background-color 180ms ease;
