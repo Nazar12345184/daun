@@ -44,8 +44,20 @@
 
         <h1 class="page-title">Teams</h1>
 
+        <div class="team-filters" role="group" aria-label="Filter teams by roster">
+            <button class="btn active" type="button" data-team-filter="all">All teams</button>
+            <button class="btn" type="button" data-team-filter="BARBOS">BARBOS</button>
+            <button class="btn" type="button" data-team-filter="NAVI">NAVI</button>
+            <button class="btn" type="button" data-team-filter="SPIRIT">SPIRIT</button>
+            <button class="btn" type="button" data-team-filter="Vitality">Vitality</button>
+            <button class="btn" type="button" data-team-filter="FaZe">FaZe</button>
+            <button class="btn" type="button" data-team-filter="MOUZ">MOUZ</button>
+            <button class="btn" type="button" data-team-filter="G2">G2</button>
+            <button class="btn" type="button" data-team-filter="opponent">opponent</button>
+        </div>
+
         <div class="teams">
-            <article class="team-card">
+            <article class="team-card" data-team="BARBOS">
                 <div class="team-card__header">
                     <div class="team-logo">B</div>
                     <img src="../ph/gg.jpg" alt="BARBOS logo">
@@ -71,7 +83,7 @@
                 </div>
             </article>
 
-            <article class="team-card">
+            <article class="team-card" data-team="NAVI">
                 <div class="team-card__header">
                     <img src="../ph/n.jpg" alt="NAVI logo">
                     <div>
@@ -96,7 +108,7 @@
                 </div>
             </article>
 
-            <article class="team-card">
+            <article class="team-card" data-team="SPIRIT">
                 <div class="team-card__header">
                     <img class="team-logo--cyan" src="../ph/s.png" alt="SPIRIT logo">
                     <div>
@@ -121,7 +133,7 @@
                 </div>
             </article>
 
-            <article class="team-card">
+            <article class="team-card" data-team="opponent">
                 <div class="team-card__header">
                     <img class="team-logo team-logo--gold" src="../ph/0pp.png" alt="opponent logo">
                     <div>
@@ -135,14 +147,18 @@
                 </div>
                 <ul class="team-roster">
                     <li><a href="0pp.html">0pp</a><span>AWP</span></li>
+                    <li><a href="Rival.html">Rival</a><span>Entry</span></li>
+                    <li><a href="Clutch.html">Clutch</a><span>Rifler</span></li>
+                    <li><a href="Shadow.html">Shadow</a><span>Support</span></li>
+                    <li><a href="Ghost.html">Ghost</a><span>Lurker</span></li>
                 </ul>
                 <div class="card-footer">
                     <span>2 wins</span>
-                    <span class="card-link">opponent</span>
+                    <a class="card-link" href="opponent.html">Open team</a>
                 </div>
             </article>
 
-            <article class="team-card">
+            <article class="team-card" data-team="Vitality">
                 <div class="team-card__header">
                     <img class="team-logo team-logo--gold" src="../ph/sopla.png" alt="Vitality logo">
                     <div>
@@ -155,9 +171,11 @@
                     <span class="team-role">Tier: Top</span>
                 </div>
                 <ul class="team-roster">
-                    <li><span>ZywOo</span><span>AWP</span></li>
-                    <li><span>Magisk</span><span>IGL</span></li>
-                    <li><span>ApEX</span><span>Entry</span></li>
+                    <li><a href="ZywOo.html">ZywOo</a><span>AWP</span></li>
+                    <li><a href="Magisk.html">Magisk</a><span>IGL</span></li>
+                    <li><a href="ApEX.html">ApEX</a><span>Entry</span></li>
+                    <li><a href="mezii.html">mezii</a><span>Support</span></li>
+                    <li><a href="flameZ.html">flameZ</a><span>Entry</span></li>
                 </ul>
                 <div class="card-footer">
                     <span>22 wins</span>
@@ -165,7 +183,7 @@
                 </div>
             </article>
 
-            <article class="team-card">
+            <article class="team-card" data-team="FaZe">
                 <div class="team-card__header">
                     <img class="team-logo team-logo--cyan" src="../ph/ggg.jpg" alt="FaZe logo">
                     <div>
@@ -178,13 +196,65 @@
                     <span class="team-role">Tier: Top</span>
                 </div>
                 <ul class="team-roster">
-                    <li><span>ropz</span><span>Entry</span></li>
-                    <li><span>rain</span><span>Anchor</span></li>
-                    <li><span>Twistzz</span><span>IGL</span></li>
+                    <li><a href="ropz.html">ropz</a><span>Entry</span></li>
+                    <li><a href="rain.html">rain</a><span>Anchor</span></li>
+                    <li><a href="Twistzz.html">Twistzz</a><span>IGL</span></li>
+                    <li><a href="karrigan.html">karrigan</a><span>IGL</span></li>
+                    <li><a href="broky.html">broky</a><span>AWP</span></li>
                 </ul>
                 <div class="card-footer">
                     <span>18 wins</span>
                     <span class="card-link">Elite</span>
+                </div>
+            </article>
+
+            <article class="team-card" data-team="MOUZ">
+                <div class="team-card__header">
+                    <img class="team-logo team-logo--cyan" src="../ph/s.png" alt="MOUZ logo">
+                    <div>
+                        <div class="team-label">Team</div>
+                        <h2><a href="MOUZ.html">MOUZ</a></h2>
+                    </div>
+                </div>
+                <div class="team-meta">
+                    <span class="team-badge">#7</span>
+                    <span class="team-role">Tier: Top</span>
+                </div>
+                <ul class="team-roster">
+                    <li><a href="xertioN.html">xertioN</a><span>Entry</span></li>
+                    <li><a href="torzsi.html">torzsi</a><span>AWP</span></li>
+                    <li><a href="Jimpphat.html">Jimpphat</a><span>Rifler</span></li>
+                    <li><a href="Spinx.html">Spinx</a><span>Support</span></li>
+                    <li><a href="Bymas.html">Bymas</a><span>IGL</span></li>
+                </ul>
+                <div class="card-footer">
+                    <span>16 wins</span>
+                    <span class="card-link">HLTV</span>
+                </div>
+            </article>
+
+            <article class="team-card" data-team="G2">
+                <div class="team-card__header">
+                    <img class="team-logo team-logo--gold" src="../ph/n.jpg" alt="G2 logo">
+                    <div>
+                        <div class="team-label">Team</div>
+                        <h2><a href="G2.html">G2</a></h2>
+                    </div>
+                </div>
+                <div class="team-meta">
+                    <span class="team-badge">#6</span>
+                    <span class="team-role">Tier: Top</span>
+                </div>
+                <ul class="team-roster">
+                    <li><a href="m0NESY.html">m0NESY</a><span>Entry</span></li>
+                    <li><a href="malbsMd.html">malbsMd</a><span>Rifler</span></li>
+                    <li><a href="hunter.html">huNter-</a><span>AWP</span></li>
+                    <li><a href="sniper.html">sniper</a><span>Support</span></li>
+                    <li><a href="nexa.html">nexa</a><span>IGL</span></li>
+                </ul>
+                <div class="card-footer">
+                    <span>15 wins</span>
+                    <span class="card-link">HLTV</span>
                 </div>
             </article>
         </div>
@@ -212,6 +282,23 @@
         </a>
     </aside>
 </div>
+
+<script>
+    const teamFilterButtons = document.querySelectorAll('[data-team-filter]');
+    const teamCards = document.querySelectorAll('.team-card');
+
+    teamFilterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const selectedTeam = button.dataset.teamFilter;
+            teamFilterButtons.forEach((item) => item.classList.toggle('active', item === button));
+            teamCards.forEach((card) => {
+                const showCard = selectedTeam === 'all' || card.dataset.team === selectedTeam;
+                card.hidden = !showCard;
+                card.style.display = showCard ? '' : 'none';
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

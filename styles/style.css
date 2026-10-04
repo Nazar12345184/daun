@@ -459,9 +459,27 @@ nav a:hover, .back-link:hover {
     opacity: 1;
 }
 
+.btn.active {
+    color: var(--text-main);
+    border-color: var(--border-accent);
+    box-shadow: 0 0 0 1px rgba(126, 168, 196, 0.2), 0 0 14px rgba(94, 174, 255, 0.18);
+}
+
+.btn.active::before {
+    opacity: 1;
+}
+
 .btn:active {
     transform: scale(0.97);
     transition: transform 0.06s ease-out;
+}
+
+.player-filters,
+.team-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 18px;
 }
 
 /* --- Grids & Cards --- */
@@ -1629,6 +1647,12 @@ header {
     letter-spacing: 0.08em;
 }
 
+.sidebar-ad img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .previous-news {
     margin-top: 14px;
     background: #1b2025;
@@ -1852,6 +1876,17 @@ h1, h2, h3 {
     max-width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Restore square corners across the interface. */
+*:not(.glow-orb),
+*:not(.glow-orb)::before,
+*:not(.glow-orb)::after {
+    border-radius: 0 !important;
+}
+
+.glow-orb {
+    border-radius: 50% !important;
 }
 
 

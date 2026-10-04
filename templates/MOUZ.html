@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>opponent — команда</title>
+    <title>MOUZ — команда</title>
     <link rel="stylesheet" href="../styles/style.css">
     <script src="../styles/auth.js" defer></script>
 </head>
@@ -31,10 +31,10 @@
 <div class="container">
     <section class="profile-card team-profile-card">
         <div class="team-profile-header">
-            <img class="team-profile-logo" src="../ph/0pp.png" alt="opponent logo">
+            <img class="team-profile-logo" src="../ph/s.png" alt="MOUZ logo">
             <div>
                 <div class="team-profile-subtitle">Team</div>
-                <h1>opponent</h1>
+                <h1>MOUZ</h1>
             </div>
         </div>
 
@@ -46,20 +46,20 @@
 
         <div class="team-panel active">
             <div class="team-grid">
-                <article class="team-player-card"><h3><a href="0pp.html">0pp</a></h3><div class="player-role">AWP</div></article>
-                <article class="team-player-card"><h3><a href="Rival.html">Rival</a></h3><div class="player-role">Entry</div></article>
-                <article class="team-player-card"><h3><a href="Clutch.html">Clutch</a></h3><div class="player-role">Rifler</div></article>
-                <article class="team-player-card"><h3><a href="Shadow.html">Shadow</a></h3><div class="player-role">Support</div></article>
-                <article class="team-player-card"><h3><a href="Ghost.html">Ghost</a></h3><div class="player-role">Lurker</div></article>
+                <article class="team-player-card"><h3><a href="xertioN.html">xertioN</a></h3><div class="player-role">Entry</div></article>
+                <article class="team-player-card"><h3><a href="torzsi.html">torzsi</a></h3><div class="player-role">AWP</div></article>
+                <article class="team-player-card"><h3><a href="Jimpphat.html">Jimpphat</a></h3><div class="player-role">Rifler</div></article>
+                <article class="team-player-card"><h3><a href="Spinx.html">Spinx</a></h3><div class="player-role">Support</div></article>
+                <article class="team-player-card"><h3><a href="Bymas.html">Bymas</a></h3><div class="player-role">IGL</div></article>
             </div>
         </div>
 
         <div class="team-panel">
             <div class="team-numbers">
-                <div class="stat-box"><span class="label">Wins</span><span class="value">2</span></div>
-                <div class="stat-box"><span class="label">Winrate</span><span class="value">45%</span></div>
-                <div class="stat-box"><span class="label">K/D</span><span class="value">1.08</span></div>
-                <div class="stat-box"><span class="label">Map Wins</span><span class="value">7</span></div>
+                <div class="stat-box"><span class="label">Wins</span><span class="value">16</span></div>
+                <div class="stat-box"><span class="label">Winrate</span><span class="value">64%</span></div>
+                <div class="stat-box"><span class="label">K/D</span><span class="value">1.20</span></div>
+                <div class="stat-box"><span class="label">HLTV</span><span class="value">#7</span></div>
             </div>
         </div>
 
@@ -67,15 +67,15 @@
             <div class="results">
                 <article class="result-card">
                     <div>
-                        <div class="result-title" onclick="location.href='match1.html'">Barbos vs Opponent</div>
+                        <div class="result-title" onclick="location.href='match4.html'">MOUZ vs FaZe</div>
                     </div>
                     <div>
-                        <div class="result-score">2:0</div>
+                        <div class="result-score">2:1</div>
                     </div>
                 </article>
                 <article class="result-card">
                     <div>
-                        <div class="result-title" onclick="location.href='match7.html'">opponent vs AUSTRALIS</div>
+                        <div class="result-title" onclick="location.href='match5.html'">MOUZ vs NAVI</div>
                     </div>
                     <div>
                         <div class="result-score">2:0</div>
@@ -89,15 +89,10 @@
   document.addEventListener('DOMContentLoaded', function () {
     const tabs = Array.from(document.querySelectorAll('.team-tab'));
     const panels = Array.from(document.querySelectorAll('.team-panel'));
-
     tabs.forEach(function (tab, index) {
       tab.addEventListener('click', function () {
-        tabs.forEach(function (item) {
-          item.classList.toggle('active', item === tab);
-        });
-        panels.forEach(function (panel, panelIndex) {
-          panel.classList.toggle('active', panelIndex === index);
-        });
+        tabs.forEach(function (item) { item.classList.toggle('active', item === tab); });
+        panels.forEach(function (panel, panelIndex) { panel.classList.toggle('active', panelIndex === index); });
       });
     });
   });
