@@ -1423,6 +1423,20 @@ body {
         repeating-linear-gradient(0deg, rgba(255,255,255,0.018) 0, rgba(255,255,255,0.018) 1px, transparent 1px, transparent 4px);
 }
 
+body.results-page {
+    display: flex;
+    flex-direction: column;
+}
+
+body.results-page > .page-layout {
+    flex: 1;
+    width: 100%;
+}
+
+body.results-page > .site-footer {
+    flex-shrink: 0;
+}
+
 header {
     background: #191e23;
     border-bottom: 2px solid #303941;
@@ -2016,4 +2030,3 @@ h1, h2, h3 {
     object-fit: contain;
     background: rgba(0, 0, 0, 0.18);
 }
-
