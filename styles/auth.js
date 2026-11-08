@@ -112,6 +112,16 @@
         }
     }
 
+    const eventsCtaButton = document.querySelector('#events-cta-button');
+    if (eventsCtaButton) {
+        eventsCtaButton.addEventListener('click', () => {
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', 'click_events_cta');
+            }
+            location.href = 'templates/events.html';
+        });
+    }
+
     const form = document.querySelector('#login-form');
     if (!form) {
         return;
