@@ -6,6 +6,17 @@
     <title>Bet-King — News</title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="styles/auth.js" defer></script>
+    
+    <!-- КОД GOOGLE ANALYTICS 4 (для перегляду відвідувань та подій) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMFDEE114P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QMFDEE114P');
+    </script>
+
+    <!-- ВАШ СТАРИЙ КОД GOOGLE TAG MANAGER (GTM) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -182,9 +193,28 @@
 <div class="glow-orb glow-orb-orange"></div>
 <div class="glow-orb glow-orb-cyan"></div>
 
+<!-- Один футер -->
 <footer class="site-footer">
     <p>&copy; 2026 <span>Bet-King & GG Arena</span>. Всі права захищено. Кіберспортивний портал турнірів та матчів.</p>
 </footer>
+
+<!-- Скрипт для відправки події при кліку на кнопку -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const ctaButton = document.getElementById('events-cta-button');
+
+        if (ctaButton) {
+            ctaButton.addEventListener('click', () => {
+                // Відправляємо подію в Google Analytics
+                gtag('event', 'click_events_btn', {
+                    'event_category': 'engagement',
+                    'event_label': 'News Page CTA Button'
+                });
+                console.log('Подію click_events_btn відправлено в GA4!');
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
